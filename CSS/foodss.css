@@ -1,0 +1,162 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f5e7;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: #4b3832;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    top: 15px;
+    right: 100px;
+    position: fixed;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: white;
+}
+
+.social-icons img {
+    width: 24px; /* Adjust icon size */
+    height: 24px;
+    display: inline-block;
+    border-radius: 50%; /* Optional: make icons rounded */
+}
+
+/* 漢堡選單 */
+.hamburger-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1100;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background: #ffffff;
+}
+
+.menu {
+    display: none;
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background-color: #4b3832;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu ul li a:hover {
+    color: #ffa500;
+}
+
+main {
+    padding-top: 80px;
+}
+
+.recipe h1 {
+    font-size: 36px;
+    color: #4b3832;
+    margin-bottom: 20px;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+}
+
+.carousel-content {
+    text-align: center;
+    max-width: 500px;
+    position: relative;
+}
+
+.carousel-content img {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.carousel-content h2 {
+    margin-top: 15px;
+    color: #4b3832;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.carousel-content p {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #4b3832;
+}
+
+.arrow {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #4b3832;
+    cursor: pointer;
+    outline: none;
+    transition: color 0.3s ease;
+}
+
+.arrow:hover {
+    color: #ffa500;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4b3832;
+    color: white;
+}

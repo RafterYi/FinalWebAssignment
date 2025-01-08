@@ -1,0 +1,176 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f5e7;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: #4b3832;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    top: 15px;
+    right: 100px;
+    position: fixed;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: white;
+}
+
+.social-icons img {
+    width: 24px; /* Adjust icon size */
+    height: 24px;
+    display: inline-block;
+    border-radius: 50%; /* Optional: make icons rounded */
+}
+
+/* 漢堡選單 */
+.hamburger-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1100;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background: #ffffff;
+}
+
+.menu {
+    display: none;
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background-color: #4b3832;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu ul li a:hover {
+    color: #ffa500;
+}
+.area {
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.area h1 {
+    font-size: 2.5em;
+    color: #4d2e06;
+    margin: 50px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    
+}
+
+.area-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* 確保內容從頂部對齊 */
+    gap: 20px; /* 區域間距 */
+    padding: 20px;
+    flex-wrap: wrap; /* 讓內容在小螢幕時換行 */
+}
+
+.area-item {
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    width: calc(33.33% - 40px); /* 在大螢幕上顯示三欄 */
+    max-width: 250px; /* 限制區域最大寬度 */
+    margin: 10px; /* 區域外間距 */
+    flex: 1 1 calc(33.33% - 40px); /* 自適應大小 */
+}
+
+.area-item img {
+    width: 100%; /* 圖片依父容器縮放 */
+    height: auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    border-radius: 10px; /* 圓角效果 */
+}
+
+
+.area-item p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #4b3832;
+}
+
+.area-item.open img {
+    transform: scale(1.1); /* 縮小放大效果 */
+    opacity: 0.5;
+}
+
+.area-item.open::after {
+    content: attr(data-content);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #4b3832;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+    width: 90%; /* 內文框寬度縮小 */
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4b3832;
+    color: white;
+}
