@@ -1,0 +1,208 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f5e7;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: #4b3832;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    top: 15px;
+    right: 100px;
+    position: fixed;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: white;
+}
+
+.social-icons img {
+    width: 24px; /* Adjust icon size */
+    height: 24px;
+    display: inline-block;
+    border-radius: 50%; /* Optional: make icons rounded */
+}
+
+/* 漢堡選單 */
+.hamburger-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1100;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background: #ffffff;
+}
+
+.menu {
+    display: none;
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background-color: #4b3832;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu ul li a:hover {
+    color: #ffa500;
+}
+
+/* Banner */
+.banner {
+    text-align: center;
+    padding: 500px 20px;
+    background-image: url('../images/HomePageMap.png');
+    background-size: cover;
+    background-position: center;
+    color: #4b3832;
+    
+}
+
+.bannerText {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(238, 225, 208, 0.821); /* 半透明背景色，黑色 50% 透明 */
+    border-radius: 10px; /* 圓角 */
+
+}
+
+/* 隱藏內容 */
+.content {
+    display: none;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../images/PAPER01.png');
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.content.hidden {
+    display: none;
+}
+
+.important-note, .time {
+    width: 45%;
+    margin-bottom: 20px;
+}
+
+.important-note {
+    text-align: left;
+}
+
+.important-note ul{
+    list-style-type: none;
+    padding: 0; /* 移除內邊距 */
+    margin: 0; /* 移除外邊距 */
+
+}
+
+.time {
+    text-align: right;
+    list-style-type: none;
+}
+
+.time ul{
+    list-style-type: none;
+}
+
+/* 圖片 */
+.clock-img img {
+    width: 50%;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 展開箭頭 */
+.arrow {
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4b3832;
+    color: white;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #e49725; /* 按鈕顏色 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0; /* 預設為隱藏狀態 */
+    transform: translateY(20px); /* 往下移動 */
+    z-index: 1000;
+}
+
+.scroll-to-top.show {
+    opacity: 1; /* 顯示按鈕 */
+    transform: translateY(0); /* 回到原位 */
+}

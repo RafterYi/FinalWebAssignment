@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRCORD</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">GRCORD</div>
+            <div class="social-icons">
+                <a href="#"><img src="./images/Facebooklogo.png" alt="Facebook"></a>
+                <a href="#"><img src="./images/Instagramlogo.png" alt="Instagram"></a>
+                <a href="#" class="login">log in</a>
+            </div>
+            <div class="hamburger-menu" id="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 漢堡選單 -->
+    <nav class="menu" id="menu">
+        <ul>
+            <li><a href="#" class="menu-item">Bulletin</a></li>
+            <li><a href="#" class="menu-item">Activity</a></li>
+            <li><a href="#" class="menu-item">About Us</a></li>
+            <li><a href="#" class="menu-item">Recipe</a></li>
+            <li><a href="#" class="menu-item">Regional Map</a></li>
+            <li><a href="#" class="menu-item">Download</a></li>
+        </ul>
+    </nav>
+
+    <!-- Banner -->
+    <section class="banner">
+        <div class="bannerText">
+            <h1>Let time pass by, let ideals be built.</h1>
+            <p>Don't waste time! Don't let your life spread out in the void, ignite it in the bright work!</p>
+
+        </div>
+        
+    </section>
+
+    <!-- 展開按鈕 -->
+    <div class="arrow" id="expand-btn">▼</div>
+
+    <!-- 隱藏內容 -->
+    <section class="content hidden" id="expandable-content">
+        <div class="important-note">
+            <h2>Important Note</h2>
+            <ul>
+                <li>The First Great Revolution (193)</li>
+                <li>Blow up the NTUT (201)</li>
+                <li>During the Ice Age (540–1092), a refrigerator was developed</li>
+                <li>The Second Great Revolution (2077) focuses on strengthening life</li>
+                <li>Final evaluation (2791)</li>
+                <li>Extinction (2792), especially college students disappeared in large numbers</li>
+                <li>Suspension of study (4008)</li>
+            </ul>
+        </div>
+        <div class="time">
+            <h2>Time</h2>
+            <ul>
+                <li>Forest Country: 22:37</li>
+                <li>Kingdom of Sand: 10:05</li>
+                <li>Salda: 08:51</li>
+                <li>Sky Island: 12:00</li>
+                <li>Indas: 18:49</li>
+                <li>Mecca: 15:11</li>
+                <li>Kandari: 09:26</li>
+                <li>Grass Country: 04:18</li>
+            </ul>
+        </div>
+        <div class="clock-img">
+            <img src="./images/ClockDown.PNG" alt="Clock of the World">
+        </div>
+        <div class="ClockText">
+            <h2>clock of the world</h2>
+            <p>The clock has been running for tens of thousands of years. Regardless of the time difference, countries use this clock as the standard and ring the bell once a year.</p>
+        </div>
+    </section>
+    <button class="scroll-to-top" id="scroll-to-top">Top</button>
+
+    <script>
+        // 取得按鈕元素
+        const scrollToTopButton = document.getElementById('scroll-to-top');
+
+        // 監聽滾動事件，顯示或隱藏按鈕
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) { // 當滾動超過200px時顯示按鈕
+                scrollToTopButton.classList.add('show');
+            } else {
+                scrollToTopButton.classList.remove('show');
+            }
+        });
+
+        // 監聽按鈕點擊事件，滾動到頁面頂部
+        scrollToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0, // 滾動到頂部
+                behavior: 'smooth' // 平滑滾動效果
+            });
+        });
+    </script>
+
+    <footer>
+        <p>jhcsuioh.osks.sjcos@gmail.com | 08-2738-1809</p>
+    </footer>
+    <script src="./JS/script.js"></script>
+</body>
+</html>
