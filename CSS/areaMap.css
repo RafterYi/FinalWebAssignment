@@ -124,7 +124,7 @@ header {
 .area-container {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* 確保內容從頂部對齊 */
+    align-items: flex-start;
     gap: 20px; /* 區域間距 */
     padding: 20px;
     flex-wrap: wrap; /* 讓內容在小螢幕時換行 */
@@ -140,6 +140,23 @@ header {
     margin: 10px; /* 區域外間距 */
     flex: 1 1 calc(33.33% - 40px); /* 自適應大小 */
 }
+
+/* Media Query for Medium Screens (平板) */
+@media (max-width: 768px) {
+    .area-item {
+        width: calc(50% - 20px); /* 中等螢幕顯示兩欄 */
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+/* Media Query for Small Screens (手機) */
+@media (max-width: 480px) {
+    .area-item {
+        width: 100%; /* 小螢幕顯示單欄 */
+        flex: 1 1 100%;
+    }
+}
+
 
 .area-item img {
     width: 100%; /* 圖片依父容器縮放 */
