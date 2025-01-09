@@ -1,6 +1,5 @@
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f9f5e7;
@@ -167,6 +166,7 @@ header {
 
 
 .area-item p {
+    font-size: 1.5em;
     margin-top: 10px;
     font-weight: bold;
     color: #4b3832;
@@ -183,11 +183,11 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #4b3832;
-    background: rgba(255, 255, 255, 0.9);
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.44);
     padding: 10px;
     border-radius: 10px;
-    width: 90%; /* 內文框寬度縮小 */
+    width: 70%; /* 內文框寬度縮小 */
     text-align: center;
     font-size: 14px;
     line-height: 1.5;

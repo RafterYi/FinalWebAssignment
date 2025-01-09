@@ -129,7 +129,7 @@ header {
     left: 20px; /* 與左側保持一定距離 */
     background-color: rgba(231, 215, 184, 0.813); /* 半透明的背景色 */
     padding: 65px 20px;
-    border-radius: 5px; /* 讓文字框有圓角 */
+    border-radius: 40px; /* 讓文字框有圓角 */
     color: #4b3832; /* 文字顏色 */
     max-width: 80%; /* 控制文字框的最大寬度 */
 }
@@ -168,7 +168,19 @@ header {
 .important-note {
     text-align: left;
 }
+.important-note h2 {
+    font-size: 3em;
 
+}
+
+.time h2 {
+    font-size: 3em;
+
+}
+.ClockText h2 {
+    font-size: 3em;
+
+}
 .important-note ul{
     list-style-type: none;
     padding: 0; /* 移除內邊距 */
