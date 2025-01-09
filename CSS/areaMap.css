@@ -171,25 +171,48 @@ header {
     color: #4b3832;
 }
 
-.area-item.open img {
-    transform: scale(1.1); /* 縮小放大效果 */
-    opacity: 0.5;
+/* 彈跳動畫 */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
+/* 後面的圖片虛化效果 */
+.area-item.open img {
+    transform: scale(1.1); /* 放大圖片 */
+    opacity: 0.2; /* 讓圖片更虛化 */
+    filter: blur(5px); /* 添加模糊效果 */
+    transition: all 0.5s ease; /* 平滑過渡 */
+}
+
+/* 彈跳文字框 */
 .area-item.open::after {
     content: attr(data-content);
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 10%;
+    left: 10%;
     transform: translate(-50%, -50%);
     color: #ffffff;
-    background: rgba(0, 0, 0, 0.44);
+    background: rgba(0, 0, 0, 0.7);
     padding: 10px;
     border-radius: 10px;
-    width: 70%; /* 內文框寬度縮小 */
+    width: 70%;
     text-align: center;
     font-size: 14px;
     line-height: 1.5;
+    animation: bounceIn 0.5s ease forwards; /* 添加彈跳動畫 */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* 添加陰影提升效果 */
+    z-index: 2;
 }
 
 footer {
