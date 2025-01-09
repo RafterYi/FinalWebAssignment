@@ -23,9 +23,18 @@ header {
 
 .logo {
     font-size: 24px;
+    font-family: Arial, sans-serif;
     font-weight: bold;
 }
 
+.logo a {
+    text-decoration: none; /* 移除下劃線 */
+    color: rgb(255, 255, 255); /* 黑色文字 */
+}
+
+.logo a:hover {
+    color: #ffa500; /* 懸停時文字變橙紅色 */
+}
 .social-icons {
     display: flex;
     align-items: center;
