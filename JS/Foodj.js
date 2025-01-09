@@ -4,20 +4,6 @@ document.getElementById('menu-btn').addEventListener('click', function () {
     menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
 });
 
-// 展開內容區域
-document.getElementById('expand-btn').addEventListener('click', function () {
-    const content = document.getElementById('expandable-content');
-    const arrow = this;
-
-    // Toggle content visibility
-    if (content.style.display === 'flex') {
-        content.style.display = 'none';
-        arrow.textContent = '▼';
-    } else {
-        content.style.display = 'flex';
-        arrow.textContent = '▲';
-    }
-});
 
 
 const recipes = [
@@ -38,22 +24,27 @@ const recipes = [
     }
 ];
 
+
 let currentIndex = 0;
 
+// DOM elements
 const imageElement = document.getElementById('recipe-image');
 const titleElement = document.getElementById('recipe-title');
 const descriptionElement = document.getElementById('recipe-description');
 
+// Previous button
 document.getElementById('prev-btn').addEventListener('click', () => {
     currentIndex = (currentIndex - 1 + recipes.length) % recipes.length;
     updateCarousel();
 });
 
+// Next button
 document.getElementById('next-btn').addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % recipes.length;
     updateCarousel();
 });
 
+// Update carousel
 function updateCarousel() {
     const recipe = recipes[currentIndex];
     imageElement.src = recipe.image;
