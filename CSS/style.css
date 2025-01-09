@@ -218,7 +218,7 @@ header {
     left: 50%;
     transform-origin: center bottom; /* 設置旋轉的基點 */
     transform: translate(-50%, -100%) rotate(0deg);
-    background-color: #720000; /* 指針顏色 */
+    background-color: #c37e00; /* 指針顏色 */
     border-radius: 2px;
 }
 
