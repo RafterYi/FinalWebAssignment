@@ -51,3 +51,23 @@ function updateCarousel() {
     titleElement.textContent = recipe.title;
     descriptionElement.textContent = recipe.description;
 }
+
+function updateCarousel() {
+    // 取得當前圖片和新圖片
+    const recipe = recipes[currentIndex];
+
+    // 暫時為圖片添加漸出效果
+    imageElement.classList.remove('image-enter');
+    imageElement.classList.add('image-leave');
+
+    // 等待漸出動畫結束後，切換圖片和文字
+    setTimeout(() => {
+        imageElement.src = recipe.image;
+        titleElement.textContent = recipe.title;
+        descriptionElement.textContent = recipe.description;
+
+        // 移除漸出效果，添加漸入效果
+        imageElement.classList.remove('image-leave');
+        imageElement.classList.add('image-enter');
+    }, 500); // 與 CSS 動畫時間對應
+}
