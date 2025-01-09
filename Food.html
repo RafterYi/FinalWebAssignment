@@ -51,6 +51,28 @@
             </div>
         </section>
     </main>
+    <button class="scroll-to-top" id="scroll-to-top">Top</button>
+    <script>
+        // 取得按鈕元素
+        const scrollToTopButton = document.getElementById('scroll-to-top');
+
+        // 監聽滾動事件，顯示或隱藏按鈕
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) { // 當滾動超過200px時顯示按鈕
+                scrollToTopButton.classList.add('show');
+            } else {
+                scrollToTopButton.classList.remove('show');
+            }
+        });
+
+        // 監聽按鈕點擊事件，滾動到頁面頂部
+        scrollToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0, // 滾動到頂部
+                behavior: 'smooth' // 平滑滾動效果
+            });
+        });
+    </script>
 
     <footer>
         <p>jhcsuioh.osks.sjcos@gmail.com | 08-2738-1809</p>
