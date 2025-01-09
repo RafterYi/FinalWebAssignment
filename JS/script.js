@@ -20,3 +20,23 @@ document.getElementById('expand-btn').addEventListener('click', function () {
 });
 
 
+function updateClock() {
+    const now = new Date();
+
+    const hours = now.getHours() % 12; // 12小時制
+    const minutes = now.getMinutes();
+
+    const hourDeg = (hours + minutes / 60) * 30; // 每小時30度
+    const minuteDeg = minutes * 6; // 每分鐘6度
+
+    const hourHand = document.querySelector('.hour-hand');
+    const minuteHand = document.querySelector('.minute-hand');
+
+    hourHand.style.transform = `translate(-50%, -100%) rotate(${hourDeg}deg)`;
+    minuteHand.style.transform = `translate(-50%, -100%) rotate(${minuteDeg}deg)`;
+}
+
+// 初始化時鐘
+updateClock();
+// 每分鐘更新一次
+setInterval(updateClock, 60000);
