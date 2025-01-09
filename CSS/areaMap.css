@@ -169,8 +169,40 @@ header {
     margin-top: 10px;
     font-weight: bold;
     color: #4b3832;
+    position: relative; /* 為伪元素定位 */
+    overflow: hidden; /* 確保伪元素不超出文字邊界 */
+    cursor: pointer; /* 滑鼠移上時顯示手型 */
+    transition: color 0.3s ease; /* 平滑文字顏色變化 */
 }
 
+/* 伪元素：色塊 */
+.area-item p::before {
+    content: ''; /* 空內容 */
+    position: absolute;
+    top: 0;
+    left: -100%; /* 初始位置在左側 */
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 165, 0, 0.6); /* 色塊顏色 */
+    z-index: -1; /* 在文字後面 */
+    transition: left 0.5s ease; /* 左移動畫 */
+}
+
+/* 滑鼠移入：觸發伫元素刷過效果 */
+.area-item p:hover::before {
+    left: 0; /* 色塊覆蓋整個文字 */
+}
+
+/* 滑鼠移出：色塊消失 */
+.area-item p:hover::before {
+    left: 100%; /* 色塊從右側消失 */
+}
+
+/* 滑鼠移入時文字顏色變化 */
+.area-item p:hover {
+    color: #4d2e06; /* 文字變為白色 */
+    transition: color 0.3s ease;
+}
 /* 彈跳動畫 */
 @keyframes bounceIn {
     0% {
